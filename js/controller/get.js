@@ -14,5 +14,5 @@ function isiRow(value) {
             .replace("#HARIKERJA#", value.biodata.hari_kerja)
             .replace("#WARNA#", getRandomColor())
             .replace(/#WARNALOGO#/g, getRandomColorName());
-    addInner("iniTabel", content);
+    addInner("isiTabel", content);
 }
