@@ -4,7 +4,8 @@ import { isiTabel } from "../temp/table.js";
 export function isiTablePresensi(results) {
     results.forEach(isiRow);
 }
-function isiRow(value){
+
+function isiRow(value) {
     let content = 
     isiTabel.replace("#NAMA#", value.biodata.nama)
             .replace("#NOHP#", value.biodata.phone_number)
