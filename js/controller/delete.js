@@ -1,6 +1,12 @@
+function confirmDelete(IDHAPUS) {
+    if (confirm("Apakah ingin menghapus data ID " + IDHAPUS + "?")) {
+        deleteData(IDHAPUS);
+    }
+}
+
 function deleteData(IDHAPUS) {
     var presensiId = IDHAPUS;
-    var target_url = "https://ws-rayfan2024-7c90fe3029b2.herokuapp.com/delete/" + presensiId;
+    var target_url = "https://ws-haris2024-22b2408f2f8c.herokuapp.com/delete/" + presensiId;
 
     var requestOptions = {
         method: 'DELETE',
@@ -14,10 +20,4 @@ function deleteData(IDHAPUS) {
             location.reload();
         })
         .catch(error => console.log('Error:', error));
-}
-
-function confirmDelete(IDHAPUS) {
-    if (confirm("Apakah ingin menghapus data ID " + IDHAPUS + "?")) {
-        deleteData(IDHAPUS);
-    }
 }
